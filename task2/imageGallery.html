@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Image Gallery with Registration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="signup-wrapper">
+    <div class="signup-container">
+      <h1 class="signup-title">Dynamic Image Gallery</h1>
+
+      <!-- Registration Form -->
+      <div class="registration-form" id="registrationForm">
+        <h2 class="signup-title">Register to Access the Gallery</h2>
+        <div class="d-flex flex-column w-100 p-3">
+          <input type="text" id="username" class="form-input" placeholder="Enter your username" required>
+          <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+          <input type="password" id="password" class="form-input" placeholder="Enter your password" required>
+          <button class="btn-signup p-2" onclick="registerUser()">Register</button>
+        </div>
+      </div>
+
+      <!-- Image Gallery Section (Initially Hidden) -->
+      <div class="gallery-section" id="gallerySection" style="display: none;">
+        <div class="d-flex flex-column w-100 p-3">
+          <input type="text" id="imageUrl" class="form-input" placeholder="Enter image URL" required>
+          <button class="btn-signup p-2" onclick="addImage()">Add Image</button>
+        </div>
+        <div class="gallery" id="gallery">
+          <!-- Images will be dynamically added here -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
